@@ -1,0 +1,121 @@
+translation_unit
+ : {external_declaration}
+ | {}
+ ;
+
+external_declaration
+ : function_declaration
+ ;
+
+function_declaration
+ : function_def, function_body, "ってことなの"
+ ;
+
+function_def
+ : identifier"は", function_parameters_decl
+ ;
+
+function_parameters_decl
+ : { function_parameter_decl }
+ | {}
+ ;
+
+function_parameter
+ : (かず || もじ), ":", identifier"と", function_parameter_decl
+ | (かず || もじ), identifier"で"
+ ;
+
+function_body
+ : statements
+ ;
+
+statements
+ : { statement }
+ | {}
+ ;
+
+statement
+ : expression_statement
+ | call_statement
+ | return_statement
+ ;
+
+expression_statement
+ : expression "なの"
+ ;
+
+call_statement
+ : call_expression "なの"
+ ;
+
+return_statement
+ : primary_expression"を", "かえして", "なの"
+ ;
+
+expression
+ : assignment_expression
+ | additive_expression
+ ;
+
+assignment_expression
+ : identifier"は", additive_expression
+ ;
+
+call_expression
+ : call_args, identifier
+ ;
+
+call_args
+ : {call_arg}
+ | {}
+ ;
+
+call_arg
+ : primary_expression"と", call_parameter
+ | primary_expression"を"
+ ;
+
+additive_expression
+ : primary_expression
+ | binary_expression
+ ;
+
+binary_expression
+ : primary_expression"と", primary_expression"を", "かけて"
+ | primary_expression"と", primary_expression"を", "わって"
+ | primary_expression"と", primary_expression"を", "たして"
+ | primary_expression"と", primary_expression"を", "ひいて"
+ ;
+
+primary_expression
+ : identifier
+ | integer
+ | strings
+ ;
+
+identifier
+ : character, characters
+ ;
+
+characters
+ : { character }
+ | { digit }
+ | {}
+ ;
+
+integer
+ : digit_excluding_zero, digits
+ ;
+
+digits
+ : { digit }
+ | {}
+ ;
+
+strings
+ : "「"characters"」"
+ ;
+
+
+
+

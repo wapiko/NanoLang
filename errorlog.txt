@@ -1,0 +1,135 @@
+In file included from test.cpp:6:
+In file included from ./codegen.h:4:
+In file included from /usr/local/llvm/include/llvm/IR/LLVMContext.h:19:
+In file included from /usr/local/llvm/include/llvm/Support/CBindingWrapping.h:17:
+In file included from /usr/local/llvm/include/llvm/Support/Casting.h:19:
+In file included from /usr/local/llvm/include/llvm/Support/type_traits.h:17:
+In file included from /usr/lib64/gcc/x86_64-suse-linux/4.8/../../../../include/c++/4.8/type_traits:35:
+/usr/lib64/gcc/x86_64-suse-linux/4.8/../../../../include/c++/4.8/bits/c++0x_warning.h:32:2: error: This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+#error This file requires compiler and library support for the \
+ ^
+In file included from test.cpp:6:
+In file included from ./codegen.h:4:
+In file included from /usr/local/llvm/include/llvm/IR/LLVMContext.h:19:
+In file included from /usr/local/llvm/include/llvm/Support/CBindingWrapping.h:17:
+In file included from /usr/local/llvm/include/llvm/Support/Casting.h:19:
+/usr/local/llvm/include/llvm/Support/type_traits.h:55:25: error: no type named 'remove_reference' in namespace 'std'
+  typedef typename std::remove_reference<T>::type UnderlyingT;
+          ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+/usr/local/llvm/include/llvm/Support/type_traits.h:55:41: error: expected member name or ';' after declaration specifiers
+  typedef typename std::remove_reference<T>::type UnderlyingT;
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+/usr/local/llvm/include/llvm/Support/type_traits.h:59:13: error: no member named 'is_class' in namespace 'std'
+      !std::is_class<UnderlyingT>::value && // Filter conversion operators.
+       ~~~~~^
+/usr/local/llvm/include/llvm/Support/type_traits.h:59:22: error: use of undeclared identifier 'UnderlyingT'
+      !std::is_class<UnderlyingT>::value && // Filter conversion operators.
+                     ^
+/usr/local/llvm/include/llvm/Support/type_traits.h:59:36: error: no member named 'value' in the global namespace; did you mean simply 'value'?
+      !std::is_class<UnderlyingT>::value && // Filter conversion operators.
+                                 ~~^~~~~
+                                   value
+/usr/local/llvm/include/llvm/Support/type_traits.h:58:21: note: 'value' declared here
+  static const bool value =
+                    ^
+/usr/local/llvm/include/llvm/Support/type_traits.h:60:13: error: no template named 'is_pointer' in namespace 'std'; did you mean '__is_pointer'?
+      !std::is_pointer<UnderlyingT>::value &&
+       ~~~~~^~~~~~~~~~
+            __is_pointer
+/usr/lib64/gcc/x86_64-suse-linux/4.8/../../../../include/c++/4.8/bits/cpp_type_traits.h:290:12: note: '__is_pointer' declared here
+    struct __is_pointer
+           ^
+In file included from test.cpp:6:
+In file included from ./codegen.h:4:
+In file included from /usr/local/llvm/include/llvm/IR/LLVMContext.h:19:
+In file included from /usr/local/llvm/include/llvm/Support/CBindingWrapping.h:17:
+In file included from /usr/local/llvm/include/llvm/Support/Casting.h:19:
+/usr/local/llvm/include/llvm/Support/type_traits.h:60:24: error: use of undeclared identifier 'UnderlyingT'
+      !std::is_pointer<UnderlyingT>::value &&
+                       ^
+/usr/local/llvm/include/llvm/Support/type_traits.h:62:40: error: expected member name or ';' after declaration specifiers
+      std::is_convertible<UnderlyingT, unsigned long long>::value;
+                                       ^
+/usr/local/llvm/include/llvm/Support/type_traits.h:62:39: error: expected ';' at end of declaration list
+      std::is_convertible<UnderlyingT, unsigned long long>::value;
+                                      ^
+                                      ;
+/usr/local/llvm/include/llvm/Support/type_traits.h:71:17: error: no template named 'enable_if' in namespace 'std'; did you mean '__gnu_cxx::__enable_if'?
+    T, typename std::enable_if<std::is_pointer<T>::value>::type> {
+                ^~~~~~~~~~~~~~
+                __gnu_cxx::__enable_if
+/usr/lib64/gcc/x86_64-suse-linux/4.8/../../../../include/c++/4.8/ext/type_traits.h:43:12: note: '__gnu_cxx::__enable_if' declared here
+    struct __enable_if 
+           ^
+In file included from test.cpp:6:
+In file included from ./codegen.h:4:
+In file included from /usr/local/llvm/include/llvm/IR/LLVMContext.h:19:
+In file included from /usr/local/llvm/include/llvm/Support/CBindingWrapping.h:17:
+In file included from /usr/local/llvm/include/llvm/Support/Casting.h:19:
+/usr/local/llvm/include/llvm/Support/type_traits.h:71:37: error: no template named 'is_pointer' in namespace 'std'; did you mean '__is_pointer'?
+    T, typename std::enable_if<std::is_pointer<T>::value>::type> {
+                               ~~~~~^~~~~~~~~~
+                                    __is_pointer
+/usr/lib64/gcc/x86_64-suse-linux/4.8/../../../../include/c++/4.8/bits/cpp_type_traits.h:290:12: note: '__is_pointer' declared here
+    struct __is_pointer
+           ^
+In file included from test.cpp:6:
+In file included from ./codegen.h:4:
+In file included from /usr/local/llvm/include/llvm/IR/LLVMContext.h:19:
+In file included from /usr/local/llvm/include/llvm/Support/CBindingWrapping.h:17:
+In file included from /usr/local/llvm/include/llvm/Support/Casting.h:19:
+/usr/local/llvm/include/llvm/Support/type_traits.h:71:22: error: too few template arguments for class template '__enable_if'
+    T, typename std::enable_if<std::is_pointer<T>::value>::type> {
+                     ^
+/usr/lib64/gcc/x86_64-suse-linux/4.8/../../../../include/c++/4.8/ext/type_traits.h:43:12: note: template is declared here
+    struct __enable_if 
+           ^
+In file included from test.cpp:6:
+In file included from ./codegen.h:4:
+In file included from /usr/local/llvm/include/llvm/IR/LLVMContext.h:19:
+In file included from /usr/local/llvm/include/llvm/Support/CBindingWrapping.h:17:
+In file included from /usr/local/llvm/include/llvm/Support/Casting.h:19:
+/usr/local/llvm/include/llvm/Support/type_traits.h:71:60: error: expected a qualified name after 'typename'
+    T, typename std::enable_if<std::is_pointer<T>::value>::type> {
+                                                           ^
+/usr/local/llvm/include/llvm/Support/type_traits.h:71:60: error: unknown type name 'type'
+/usr/local/llvm/include/llvm/Support/type_traits.h:82:17: error: no template named 'enable_if' in namespace 'std'; did you mean '__gnu_cxx::__enable_if'?
+    T, typename std::enable_if<std::is_pointer<T>::value>::type> {
+                ^~~~~~~~~~~~~~
+                __gnu_cxx::__enable_if
+/usr/lib64/gcc/x86_64-suse-linux/4.8/../../../../include/c++/4.8/ext/type_traits.h:43:12: note: '__gnu_cxx::__enable_if' declared here
+    struct __enable_if 
+           ^
+In file included from test.cpp:6:
+In file included from ./codegen.h:4:
+In file included from /usr/local/llvm/include/llvm/IR/LLVMContext.h:19:
+In file included from /usr/local/llvm/include/llvm/Support/CBindingWrapping.h:17:
+In file included from /usr/local/llvm/include/llvm/Support/Casting.h:19:
+/usr/local/llvm/include/llvm/Support/type_traits.h:82:37: error: no template named 'is_pointer' in namespace 'std'; did you mean '__is_pointer'?
+    T, typename std::enable_if<std::is_pointer<T>::value>::type> {
+                               ~~~~~^~~~~~~~~~
+                                    __is_pointer
+/usr/lib64/gcc/x86_64-suse-linux/4.8/../../../../include/c++/4.8/bits/cpp_type_traits.h:290:12: note: '__is_pointer' declared here
+    struct __is_pointer
+           ^
+In file included from test.cpp:6:
+In file included from ./codegen.h:4:
+In file included from /usr/local/llvm/include/llvm/IR/LLVMContext.h:19:
+In file included from /usr/local/llvm/include/llvm/Support/CBindingWrapping.h:17:
+In file included from /usr/local/llvm/include/llvm/Support/Casting.h:19:
+/usr/local/llvm/include/llvm/Support/type_traits.h:82:22: error: too few template arguments for class template '__enable_if'
+    T, typename std::enable_if<std::is_pointer<T>::value>::type> {
+                     ^
+/usr/lib64/gcc/x86_64-suse-linux/4.8/../../../../include/c++/4.8/ext/type_traits.h:43:12: note: template is declared here
+    struct __enable_if 
+           ^
+In file included from test.cpp:6:
+In file included from ./codegen.h:4:
+In file included from /usr/local/llvm/include/llvm/IR/LLVMContext.h:19:
+In file included from /usr/local/llvm/include/llvm/Support/CBindingWrapping.h:17:
+In file included from /usr/local/llvm/include/llvm/Support/Casting.h:19:
+/usr/local/llvm/include/llvm/Support/type_traits.h:82:60: error: expected a qualified name after 'typename'
+    T, typename std::enable_if<std::is_pointer<T>::value>::type> {
+                                                           ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
