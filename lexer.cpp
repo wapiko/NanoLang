@@ -111,6 +111,18 @@ TokenStream* Lexer::LexicalAnalysis(string input_filename){
 	next_token = new Token(token_str_utf, TOK_RIGHTKAKKO, line_num);
       }*/
 
+      else if(isLeftKakko(next_char)){
+	token_str_utf->add(next_char);
+	while(index != length){
+	  next_char = cur_line_utf->at(index++);
+	  token_str_utf->add(next_char);
+	  if(isRightKakko(next_char)){
+	    next_token = new Token(token_str_utf, TOK_MOJIRETSU, line_num);
+	    break;
+	  }
+	}
+      }
+
       //文字列
       else{
 	token_str_utf->add(next_char);
